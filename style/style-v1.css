@@ -1,0 +1,143 @@
+* {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a, .category a.toggle {
+	text-decoration: none;
+	color: #E00;
+	border-left: 0.5em solid transparent;
+	padding-left: 0.5em;
+}
+.category a {
+	border-left: 1em solid transparent;
+}
+#menu a:hover, #menu .category a.toggle:hover {
+	border-left: 0.5em solid #E00;
+}
+#menu .category a:hover {
+	border-left: 1em solid #E00;
+}
+body {
+	display: table;
+}
+#menu {
+	background-color: #eee;
+	padding: 1em 0;
+	display: block;
+	vertical-align: top;
+}
+#menu > a.toggle {
+	display: inline-block;
+	background-color: #E00;
+	width: 100%;
+	height: 1em;
+	border: 0;
+}
+#menu a {
+	display: none;
+	padding: 2px;
+}
+#menu.active a {
+	display: block;
+}
+
+#menu .category > a.toggle, #menu .category.active > a {
+	display: block;
+}
+#menu .category > a {
+	display: none;
+	padding: 2px;
+}
+
+.word {
+	padding: 3px;
+}
+.word.common {
+	font-weight: bold;
+}
+.word > div {
+	vertical-align: top;
+	display: inline-block;
+}
+.word + .word {
+	border-top: 1px solid #999;
+}
+.word > div + div {
+	font-style: italic;
+}
+.word > div {
+	width: 12em;
+	display: inline-block;
+}
+
+
+body {
+	font-family: sans;
+/*	background-image: url('/namtep/valongo/content/dnd/background.jpg');*/
+	color: #000;
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+}
+
+#menu {
+	padding: 1em;
+}
+
+#content {
+	padding: 1em;
+	align-items: stretch;
+}
+
+#content p {
+	margin-bottom: 1em;
+}
+
+#extra {
+	flex-growblock: 2;
+}
+
+#description {
+	margin-bottom: 1px;
+}
+
+img {
+	max-width: 100%;
+	max-height: inherit;
+}
+
+@media (min-width: 640px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 40em) {
+	#menu {
+		width: 15em;
+		display: table-cell;
+		padding: 1em 0;
+	}
+	#menu > a.toggle {
+		display: none;
+	}
+	#menu a {
+		display: block;
+	}
+	.word > div + div {
+		width: 20em;
+	}
+	#description {
+		padding-right: 5em;
+	}
+	#gallery {
+		max-height: 600px;
+	}
+	#description, #gallery {
+		width: 50%;
+		float: left;
+	}
+}

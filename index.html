@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+
+<head>
+	<link href="style/style-v1.css" type="text/css" rel="stylesheet"/>
+	<link rel="icon" href="icon.png" type="image/png"/>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+	<title>DnD</title>
+	<meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+	<div id="menu">
+	<!--a href="#" class="toggle" onclick="return toggleMenu(this)" /-->
+	</div>
+
+	<div id="content">content</div>
+	<div id="extra"></div>
+
+<script>
+function toggleMenu(elem) {
+	elem.parentElement.classList.toggle("active");
+	return false;
+}
+
+baseUrl = "https://raw.githubusercontent.com/martinvis/dnd/refs/heads/main/";
+function loadData(data) {alert(data);
+//	window.history.pushState("", "", data);
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("content").innerHTML = this.responseText;
+		}
+	};
+	xhttp.open("GET", baseUrl + data, true);
+	xhttp.send();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+//	loadMenu("characters/test");
+});
+
+window.onload = function() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			loadMenu(this.responseText);
+		}
+	};
+	xhttp.open("GET", baseUrl + 'index.txt', true);
+	xhttp.send();
+}
+
+function loadMenu(data) {
+	console.log(document.getElementById('menu').innerHtml);
+
+	lines = data.split('\n');
+	const categoryMap = {};
+	for (const line of lines) {
+		var parts = line.split('/');
+		if (!categoryMap[parts[0]]) {
+		  categoryMap[parts[0]] = [];
+		}
+		categoryMap[parts[0]].push(parts[1]);
+	}
+
+	menuDiv = document.getElementById('menu');
+	menuDiv.innerHTML = '';
+	for (const category in categoryMap) {
+		const categoryDiv = document.createElement('div');
+		categoryHtml = "<div class='category active'>";
+
+		categoryHtml += "<a class='toggle' href = '#' onclick='return toggleMenu(this)'>" + category + "</a>";
+
+		categoryMap[category].sort().forEach(item => {
+			categoryHtml += "<a class='item' href = '#' onclick='return loadData(\"content/" + category + "/" + item + "\")'>" + item + "</a>"
+		});
+
+		categoryHtml += "</div>";
+		menuDiv.innerHTML += categoryHtml;
+		console.log(document.getElementById('menu').innerHtml);
+	}
+}
+</script>
+
+</body>
+
+</html>
