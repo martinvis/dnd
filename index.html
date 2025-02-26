@@ -15,7 +15,7 @@
 	<!--a href="#" class="toggle" onclick="return toggleMenu(this)" /-->
 	</div>
 
-	<div id="content">content</div>
+	<div id="content"></div>
 	<div id="extra"></div>
 
 <script>
@@ -35,6 +35,8 @@ function loadData(data) {alert(data);
 	};
 	xhttp.open("GET", baseUrl + data, true);
 	xhttp.send();
+
+	return false;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
