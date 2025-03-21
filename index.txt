@@ -1,12 +1,21 @@
 Characters/Adam
 Characters/Bandits
 Characters/Dwarfs
+Characters/Frogfolk
 Characters/Kaia
 Characters/Mr Burns
 Characters/Sonya
 Characters/Van Steel
 Monsters/Giant Wasp
 Monsters/Medusa Drake
+Monsters/Stone Golem
+Items/Dragon Plate
+Items/Flame Sword
+Items/Mysterious Book
+Items/Mysterious Chest and Necklaces
 Story/0.0 World History
-Story/1.0 Giant Wasps
-Story/1.1 Missing Dwarfs
+Story/1.0 Special Corps
+Story/1.0 Bandit Family
+Story/1.2 Missing Dwarfs
+Story/1.3 Frogfolk Village
+Story/1.4 Forbidden Library
