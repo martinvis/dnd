@@ -59,7 +59,12 @@ function loadMenu(data) {
 
 	lines = data.split('\n');
 	const categoryMap = {};
+	console.log(categoryMap)
 	for (const line of lines) {
+		if (line.trim().length === 0) {
+			continue;
+		}
+
 		var parts = line.split('/');
 		if (!categoryMap[parts[0]]) {
 		  categoryMap[parts[0]] = [];
@@ -81,7 +86,6 @@ function loadMenu(data) {
 
 		categoryHtml += "</div>";
 		menuDiv.innerHTML += categoryHtml;
-		console.log(document.getElementById('menu').innerHtml);
 	}
 }
 </script>
