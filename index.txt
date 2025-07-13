@@ -16,6 +16,7 @@ Items/5-Legged Cauldron
 Items/Book of All Things
 Items/Dragon Plate
 Items/Flame Sword
+Items/Frostbow
 Items/Mysterious Chest and Necklaces
 Story/0.0 World History
 Story/1.0 Special Corps
