@@ -12,11 +12,13 @@ Monsters/Hydra
 Monsters/Lupolit
 Monsters/Medusa Drake
 Monsters/Stone Golem
+Monsters/Werewolf
 Items/5-Legged Cauldron
 Items/Book of All Things
 Items/Dragon Plate
 Items/Flame Sword
 Items/Frostbow
+Items/Guiding Ants
 Items/Mysterious Chest and Necklaces
 Story/0.0 World History
 Story/1.0 Special Corps
@@ -32,6 +34,8 @@ Story/2.3 Giant Wasps
 Story/2.4 Spider Mutants
 Story/2.5 Prison Escape
 Story/2.6 Long Dream
+Story/3.1 Adam's Family
+Story/3.2 Magical Forest
 Gods/Astra
 Gods/Helia
 Gods/Gaia
