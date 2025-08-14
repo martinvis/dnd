@@ -34,9 +34,9 @@ Story/2.3 Giant Wasps
 Story/2.4 Spider Mutants
 Story/2.5 Prison Escape
 Story/2.6 Long Dream
-Story/3.1 Adams Family
-Story/3.2 Pawn Shop
-Story/3.3 Magical Forest
+Story/3.0 Adams Family
+Story/3.1 Pawn Shop
+Story/3.2 Magical Forest
 Gods/Astra
 Gods/Helia
 Gods/Gaia
